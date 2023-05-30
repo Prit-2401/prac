@@ -1,0 +1,27 @@
+<html>
+    <head>
+        Document
+    </head>
+    <body>
+        <script>
+            function addData() {
+              const myObj = {
+                name: document.getElementById("name").value,
+                email: document.getElementById("email").value,
+                password: document.getElementById("pass").value,
+              };
+              const myJSON = JSON.stringify(myObj); //used to convert js object to json string
+              localStorage.setItem("myData", myJSON); //allows you to store key-value pairs locally in the browser, which can persist even when the browser is closed and reopened
+            }
+          </script>
+          <form action="2.html">
+            enter Name
+            <input type="text" id="name" />
+            enter Email
+            <input type="email" name="" id="email" />
+            enter password
+            <input type="password" name="" id="pass" />
+            <button type="submit" onclick="addData()">Submit</button>
+          </form>
+    </body>
+</html>
